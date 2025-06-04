@@ -1,15 +1,21 @@
 {
-  "name": "dualpay-mvp-server",
+  "name": "dualpay-combined-project",
   "version": "1.0.0",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start:backend": "nodemon backend/server.js",
+    "start:frontend": "cd frontend && expo start --dev-client",
+    "test": "node backend/test_seed.js"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "ws": "^8.18.1",
-    "xrpl": "^4.2.0",
-    "axios": "^1.7.7",
-    "dotenv": "^16.4.5"
+    "express": "^4.17.1",
+    "xrpl": "^2.7.0",
+    "react": "^18.2.0",
+    "react-native": "0.74.5",
+    "expo": "^51.0.28",
+    "@expo/ngrok": "^4.1.3",
+    "mongodb": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
